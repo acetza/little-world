@@ -1,0 +1,11 @@
+const process = require('process');
+console.log(`Starting directory: ${process.cwd()}`);
+process.chdir('output');
+console.log(`New directory: ${process.cwd()}`);
+
+const { spawnSync } = require('child_process');
+const path = require('path');
+
+spawnSync('meson', ['compile'], {
+  stdio: 'inherit',
+});
