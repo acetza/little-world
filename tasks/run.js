@@ -1,19 +1,19 @@
-const { spawnSync } = require('child_process');
-const process = require('process');
-const path = require('path');
+const { spawnSync } = require("child_process");
+const process = require("process");
+const path = require("path");
 
 function run_release() {
-  let app_path = path.resolve('output', 'release', 'source', 'little-world');
+  let app_path = path.resolve("output", "release", "Release", "little-world");
   spawnSync(app_path, [], {
-    stdio: 'inherit',
+    stdio: "inherit",
   });
   process.exit(0);
 }
 
 function run_debug() {
-  let app_path = path.resolve('output', 'debug', 'source', 'little-world');
+  let app_path = path.resolve("output", "debug", "Debug", "little-world");
   spawnSync(app_path, [], {
-    stdio: 'inherit',
+    stdio: "inherit",
   });
   process.exit(0);
 }
@@ -21,7 +21,7 @@ function run_debug() {
 if (process.argv.length < 3) {
   run_release();
 }
-if (process.argv[2] == 'release') {
+if (process.argv[2] == "release") {
   run_release();
 }
 run_debug();

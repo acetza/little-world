@@ -1,3 +1,16 @@
 cmake_minimum_required(VERSION 3.19.3)
 project(little-world)
+
+if($<CONFIG:Debug>>)
+	message("debug mode")
+	message("CMAKE_BINARY_DIR ${CMAKE_BINARY_DIR}")
+	set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
+	message("CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
+else()
+	message("release mode")
+	message("CMAKE_BINARY_DIR ${CMAKE_BINARY_DIR}")
+	set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
+	message("CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
+endif()
+
 add_subdirectory("source")
