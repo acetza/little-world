@@ -1,6 +1,0 @@
-const { spawnSync } = require('child_process');
-const path = require('path');
-
-spawnSync(path.resolve('output', 'little-world'), {
-  stdio: 'inherit',
-});

@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/acetza/little-world/issues"
   },
-  "homepage": "https://github.com/acetza/little-world#readme"
+  "homepage": "https://github.com/acetza/little-world#readme",
+  "dependencies": {
+    "rimraf": "^3.0.2"
+  }
 }
